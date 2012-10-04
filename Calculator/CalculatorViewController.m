@@ -15,7 +15,11 @@
 - (IBAction)digitPressed:(UIButton *)sender
 {
     NSString *digit = [sender currentTitle];
-    NSLog(@"digit pressed = %@", digit);
+    
+    self.display.text = [self.display.text stringByAppendingString:digit];
+    
+    
+    
 }
 
 @end
