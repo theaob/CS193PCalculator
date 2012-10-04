@@ -32,7 +32,15 @@
         self.display.text = digit;
         self.userIsInTheMiddleOfEnteringANumber = YES;
     }
+}
+
+- (IBAction)operationPressed:(id)sender
+{
     
+}
+
+- (IBAction)enterPressed
+{
     
 }
 
