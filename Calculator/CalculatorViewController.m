@@ -8,22 +8,13 @@
 
 #import "CalculatorViewController.h"
 
-@interface CalculatorViewController ()
-
-@end
-
 @implementation CalculatorViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
+@synthesize display = _display;
 
-- (void)didReceiveMemoryWarning
+- (IBAction)digitPressed:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end
