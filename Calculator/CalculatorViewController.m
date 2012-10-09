@@ -42,7 +42,14 @@
     }
     else
     {
-        self.display.text = digit;
+        if([self.display.text rangeOfString:@"."].location == NSNotFound)
+        {
+            self.display.text = [self.display.text stringByAppendingString:digit];
+        }
+        else
+        {
+            self.display.text = digit;
+        }
         self.userIsInTheMiddleOfEnteringANumber = YES;
     }
 }
@@ -63,6 +70,34 @@
 {
     [self.brain pushOperand:[self.display.text doubleValue]];
     self.userIsInTheMiddleOfEnteringANumber = NO;
+}
+
+- (IBAction)decimalPointPressed {
+    if([self.display.text rangeOfString:@"."].location == NSNotFound)
+    {
+        self.display.text = [self.display.text stringByAppendingString:@"."];
+        self.userIsInTheMiddleOfEnteringANumber = YES;
+    }
+}
+- (IBAction)performOperation:(UIButton *)sender {
+    NSString *mathematicalFunction = sender.currentTitle;
+    if([mathematicalFunction isEqualToString:@"sin"])
+    {
+        
+    }
+    else if([mathematicalFunction isEqualToString:@"cos"])
+    {
+        
+        
+    }
+    else if([mathematicalFunction isEqualToString:@"sqrt"])
+    {
+        
+    }
+    else if([mathematicalFunction isEqualToString:@"log"])
+    {
+        
+    }
 }
 
 @end
