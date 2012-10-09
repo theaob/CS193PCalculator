@@ -102,6 +102,23 @@
             double subtrahend = [self popOperandOffStack:stack];
             result = [self popOperandOffStack:stack] - subtrahend;
         }
+        else if([operation isEqualToString:@"sin"])
+        {
+            result = sin([self popOperandOffStack:stack]);
+        }
+        else if([operation isEqualToString:@"cos"])
+        {
+            result = cos([self popOperandOffStack:stack]);
+            
+        }
+        else if([operation isEqualToString:@"sqrt"])
+        {
+            result= sqrt([self popOperandOffStack:stack]);
+        }
+        else if([operation isEqualToString:@"log"])
+        {
+            result = log([self popOperandOffStack:stack]);
+        }
         
     }
     

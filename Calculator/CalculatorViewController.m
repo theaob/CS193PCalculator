@@ -42,14 +42,7 @@
     }
     else
     {
-        if([self.display.text rangeOfString:@"."].location == NSNotFound)
-        {
-            self.display.text = [self.display.text stringByAppendingString:digit];
-        }
-        else
-        {
-            self.display.text = digit;
-        }
+        self.display.text = digit;
         self.userIsInTheMiddleOfEnteringANumber = YES;
     }
 }
@@ -77,26 +70,6 @@
     {
         self.display.text = [self.display.text stringByAppendingString:@"."];
         self.userIsInTheMiddleOfEnteringANumber = YES;
-    }
-}
-- (IBAction)performOperation:(UIButton *)sender {
-    NSString *mathematicalFunction = sender.currentTitle;
-    if([mathematicalFunction isEqualToString:@"sin"])
-    {
-        
-    }
-    else if([mathematicalFunction isEqualToString:@"cos"])
-    {
-        
-        
-    }
-    else if([mathematicalFunction isEqualToString:@"sqrt"])
-    {
-        
-    }
-    else if([mathematicalFunction isEqualToString:@"log"])
-    {
-        
     }
 }
 
